@@ -443,7 +443,10 @@
             if (contentData.cta) {
                 document.querySelector('.cta__title').textContent = contentData.cta.title || '';
                 document.querySelector('.cta__text').textContent = contentData.cta.text || '';
-                document.getElementById('ctaBookingBtn').href = contentData.cta.bookingUrl || '#';
+                const ctaBtn = document.getElementById('ctaBookingBtn');
+                if (ctaBtn && contentData.cta.bookingUrl) {
+                    ctaBtn.href = contentData.cta.bookingUrl;
+                }
             }
         }
         
