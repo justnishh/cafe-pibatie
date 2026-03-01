@@ -913,16 +913,24 @@
         }
         
         function renderBeverages() {
-            const tabsContainer = document.getElementById('beverageTabs');
-            tabsContainer.innerHTML = '';
-            Object.keys(beverageCategories).forEach(cat => {
-                const btn = document.createElement('button');
-                btn.className = `tab ${cat === currentBeverageTab ? 'active' : ''}`;
-                btn.textContent = beverageCategories[cat];
-                btn.onclick = () => { currentBeverageTab = cat; renderBeverages(); };
-                tabsContainer.appendChild(btn);
-            });
-            renderMenuItems('beverages', currentBeverageTab);
+            try {
+                const tabsContainer = document.getElementById('beverageTabs');
+                if (!tabsContainer) {
+                    console.error('beverageTabs not found');
+                    return;
+                }
+                tabsContainer.innerHTML = '';
+                Object.keys(beverageCategories).forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.className = `tab ${cat === currentBeverageTab ? 'active' : ''}`;
+                    btn.textContent = beverageCategories[cat];
+                    btn.onclick = () => { currentBeverageTab = cat; renderBeverages(); };
+                    tabsContainer.appendChild(btn);
+                });
+                renderMenuItems('beverages', currentBeverageTab);
+            } catch (err) {
+                console.error('Error rendering beverages:', err);
+            }
         }
         
         function renderFood() {

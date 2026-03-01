@@ -316,6 +316,17 @@
                     </div>
                 `;
             }).join('');
+            
+            tabsContainer.querySelectorAll('.beverage-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.dataset.tab;
+                    const parentSection = tab.closest('.beverage-menu');
+                    parentSection.querySelectorAll('.beverage-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    parentSection.querySelectorAll('.beverage-panel').forEach(panel => panel.classList.remove('active'));
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
         }
         
         function renderBeverageItem(item) {
@@ -453,17 +464,6 @@
         
         document.addEventListener('DOMContentLoaded', () => {
             loadContent();
-            
-            document.querySelectorAll('#beverageTabs .beverage-tab').forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const targetId = tab.dataset.tab;
-                    const parentSection = tab.closest('.beverage-menu');
-                    parentSection.querySelectorAll('.beverage-tab').forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    parentSection.querySelectorAll('.beverage-panel').forEach(panel => panel.classList.remove('active'));
-                    document.getElementById(targetId).classList.add('active');
-                });
-            });
         });
     </script>
 </body>
