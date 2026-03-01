@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#3d3d3d"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- P mark with wave -->
+  <path d="M10 5 L10 42 Q10 52 20 52 Q30 52 30 42 L30 28 Q30 20 22 20 Q14 20 14 28 L14 5 L40 5 Q48 5 48 12 Q48 19 40 19 L30 19 L30 5 L10 5 Z" fill="url(#iconGrad)"/>
+  
+  <!-- Coffee ring -->
+  <ellipse cx="34" cy="38" rx="9" ry="3.5" fill="none" stroke="#c45a3b" stroke-width="2" transform="rotate(-12, 34, 38)"/>
+  
+  <!-- Accent -->
+  <circle cx="44" cy="6" r="4" fill="#c45a3b"/>
+</svg>

@@ -1,0 +1,1076 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "pibatie123"
+  },
+  "site": {
+    "title": "Cafe Pibatie | Artisanal Coffee & Fusion Cuisine",
+    "description": "Cafe Pibatie - Mumbai's premium coffee destination. Specialty coffee, fusion cuisine, and artisanal drinks. Visit us at Borivali West or Oshiwara, Andheri West."
+  },
+  "hero": {
+    "title": "Where Morning Rituals Begin",
+    "subtitle": "Specialty coffee. Fusion flavors. Your daily escape."
+  },
+  "story": {
+    "label": "The Pibatie Way",
+    "heading": "Crafted for the<br>Curious Palate",
+    "paragraphs": [
+      "We don't just serve coffee. We curate moments — from the first sip of our signature espresso to the last bite of our chef's seasonal creation.",
+      "Every cup is a conversation between beans and craft. Every dish, a story told through flavors that bridge continents."
+    ],
+    "stats": {
+      "rating": "4.6★",
+      "ratingLabel": "Rating",
+      "locations": "2",
+      "locationsLabel": "Locations",
+      "forTwo": "₹800",
+      "forTwoLabel": "For Two"
+    }
+  },
+  "beverages": {
+    "desi": [
+      {
+        "id": "1",
+        "name": "Imli Banta",
+        "hindi": "इमली बंटा",
+        "desc": "Tangy tamarind with mint and lime",
+        "price": "₹240"
+      },
+      {
+        "id": "2",
+        "name": "Kalla Khatta",
+        "hindi": "काला खट्टा",
+        "desc": "Tangy Mojito with Kalla Khatta",
+        "price": "₹240"
+      },
+      {
+        "id": "3",
+        "name": "Aam Panna",
+        "hindi": "आम पना",
+        "desc": "Raw mango summer drink",
+        "price": "₹240"
+      },
+      {
+        "id": "4",
+        "name": "Masala Banta",
+        "hindi": "मसाला बंटा",
+        "desc": "Spiced soda with herbs",
+        "price": "₹240"
+      },
+      {
+        "id": "5",
+        "name": "Spiced Jamun",
+        "hindi": "मसालेदार जामुन",
+        "desc": "Black plum with spices & soda",
+        "price": "₹240"
+      },
+      {
+        "id": "6",
+        "name": "Basil Banta",
+        "hindi": "बेसिल बंटा",
+        "desc": "Fresh basil leaves with lemon",
+        "price": "₹240"
+      },
+      {
+        "id": "7",
+        "name": "Hibiscus Lemonade",
+        "hindi": "गुड़हल बंटा",
+        "desc": "Hibiscus syrup with lemon",
+        "price": "₹240"
+      }
+    ],
+    "hot-coffee": [
+      {
+        "id": "1",
+        "name": "Espresso",
+        "desc": "30ml concentrated coffee",
+        "price": "₹139"
+      },
+      {
+        "id": "2",
+        "name": "Doppio",
+        "desc": "60ml concentrated coffee",
+        "price": "₹169"
+      },
+      {
+        "id": "3",
+        "name": "Affogato",
+        "desc": "Vanilla ice cream with hot espresso",
+        "price": "₹240"
+      },
+      {
+        "id": "4",
+        "name": "Macchiato",
+        "desc": "Espresso with dash of frothy milk",
+        "price": "₹195"
+      },
+      {
+        "id": "5",
+        "name": "Black Coffee",
+        "desc": "No sugar or milk",
+        "price": "₹210 / 220"
+      },
+      {
+        "id": "6",
+        "name": "Cappuccino",
+        "desc": "Espresso, steamed milk & foam",
+        "price": "₹240 / 265"
+      },
+      {
+        "id": "7",
+        "name": "Cafe Latte",
+        "desc": "Espresso with sweet steamed milk",
+        "price": "₹240 / 265"
+      },
+      {
+        "id": "8",
+        "name": "Flat White",
+        "desc": "Micro-foamed milk with espresso",
+        "price": "₹240 / 265"
+      },
+      {
+        "id": "9",
+        "name": "Flavored Latte",
+        "desc": "Hazelnut / Irish / French Vanilla",
+        "price": "₹265 / 310"
+      }
+    ],
+    "brewed": [
+      {
+        "id": "1",
+        "name": "French Press",
+        "desc": "Manual brewing, rich & full-bodied",
+        "price": "₹265"
+      },
+      {
+        "id": "2",
+        "name": "Pour Over",
+        "desc": "Clean, flavorful & aromatic",
+        "price": "₹285"
+      },
+      {
+        "id": "3",
+        "name": "Choice of Milk",
+        "desc": "Almond / Oats / Soya / Lactose Free / Coconut",
+        "price": "+₹99",
+        "note": true
+      }
+    ],
+    "chai": [
+      {
+        "id": "1",
+        "name": "Green Tea",
+        "desc": "Pure Camellia Sinensis leaves",
+        "price": "₹195"
+      },
+      {
+        "id": "2",
+        "name": "Black Ginger Tea",
+        "desc": "With dried ginger & lime",
+        "price": "₹195"
+      },
+      {
+        "id": "3",
+        "name": "Chamomile Tea",
+        "desc": "Floral with apple-like flavor",
+        "price": "₹220"
+      },
+      {
+        "id": "4",
+        "name": "Hibiscus Tea",
+        "desc": "Herbal roselle flower infusion",
+        "price": "₹220"
+      },
+      {
+        "id": "5",
+        "name": "Kashmiri Kahwa",
+        "desc": "Classic Himalayan with Indian spices",
+        "price": "₹220"
+      },
+      {
+        "id": "6",
+        "name": "Jasmine Tea",
+        "desc": "Scented with jasmine blossoms",
+        "price": "₹220"
+      },
+      {
+        "id": "7",
+        "name": "Rose Cardamom",
+        "desc": "Green tea with rose & cardamom",
+        "price": "₹220"
+      }
+    ],
+    "doodh-chai": [
+      {
+        "id": "1",
+        "name": "Elaichi Chai",
+        "hindi": "इलायची",
+        "desc": "Aromatic cardamom infusion",
+        "price": "₹240"
+      },
+      {
+        "id": "2",
+        "name": "Adrak Wali Chai",
+        "hindi": "अदरक वाली",
+        "desc": "Infused with fresh ginger",
+        "price": "₹240"
+      },
+      {
+        "id": "3",
+        "name": "Masala Chai",
+        "hindi": "मसाला",
+        "desc": "Black tea with fragrant spices",
+        "price": "₹240"
+      },
+      {
+        "id": "4",
+        "name": "Gulab Chai",
+        "hindi": "गुलाब",
+        "desc": "Traditional with rose petals",
+        "price": "₹240"
+      }
+    ],
+    "water": [
+      {
+        "id": "1",
+        "name": "Ice Tea",
+        "desc": "Lemon / Peach / Watermelon / Lemongrass",
+        "price": "₹220"
+      },
+      {
+        "id": "2",
+        "name": "Lemonade",
+        "desc": "Fresh Lime / Guava / Peach Passion / Ginger",
+        "price": "₹220"
+      },
+      {
+        "id": "3",
+        "name": "Mojito",
+        "desc": "Cucumber Mint / Guava Chilly / Watermelon Cinnamon / Coconut Lemon",
+        "price": "₹250"
+      }
+    ],
+    "hot-choco": [
+      {
+        "id": "1",
+        "name": "Classic Hot Chocolate",
+        "desc": "Smooth cocoa & steamed milk",
+        "price": "₹240"
+      },
+      {
+        "id": "2",
+        "name": "Pepper Mint Hot Chocolate",
+        "desc": "Warm chocolate with cool peppermint",
+        "price": "₹265"
+      },
+      {
+        "id": "3",
+        "name": "Hazelnut Hot Chocolate",
+        "desc": "Creamy cocoa with toasted hazelnut",
+        "price": "₹265"
+      },
+      {
+        "id": "4",
+        "name": "Signature Hot Chocolate",
+        "desc": "House special, thick & bold",
+        "price": "₹285"
+      }
+    ],
+    "mocha": [
+      {
+        "id": "1",
+        "name": "Cafe Mocha",
+        "desc": "Espresso, chocolate & steamed milk",
+        "price": "₹250"
+      },
+      {
+        "id": "2",
+        "name": "Sea Salt Mocha",
+        "desc": "Chocolate & espresso with sea salt",
+        "price": "₹265"
+      },
+      {
+        "id": "3",
+        "name": "Hazelnut Mocha",
+        "desc": "Chocolate & espresso with hazelnut",
+        "price": "₹265"
+      },
+      {
+        "id": "4",
+        "name": "Irish Cream Mocha",
+        "desc": "Classic Irish cream flavor",
+        "price": "₹265"
+      }
+    ],
+    "cold-coffee": [
+      {
+        "id": "1",
+        "name": "Signature Cold Coffee",
+        "price": "₹240"
+      },
+      {
+        "id": "2",
+        "name": "Hazelnut Cold Coffee",
+        "price": "₹265"
+      },
+      {
+        "id": "3",
+        "name": "Salted Caramel Cold Coffee",
+        "price": "₹265"
+      },
+      {
+        "id": "4",
+        "name": "Irish Cold Coffee",
+        "price": "₹265"
+      },
+      {
+        "id": "5",
+        "name": "Choco Chip Cold Coffee",
+        "price": "₹265"
+      },
+      {
+        "id": "6",
+        "name": "Nutella Dalgona Frappe",
+        "price": "₹265"
+      }
+    ],
+    "iced": [
+      {
+        "id": "1",
+        "name": "Iced Americano",
+        "price": "₹220"
+      },
+      {
+        "id": "2",
+        "name": "Ginger Coffee Tonic",
+        "price": "₹250"
+      },
+      {
+        "id": "3",
+        "name": "Orange Rosemary Coffee Tonic",
+        "price": "₹250"
+      },
+      {
+        "id": "4",
+        "name": "Passion Fruit Coffee Tonic",
+        "price": "₹250"
+      },
+      {
+        "id": "5",
+        "name": "Classic Iced Latte",
+        "price": "₹250"
+      },
+      {
+        "id": "6",
+        "name": "Raspberry Iced Latte",
+        "price": "₹265"
+      },
+      {
+        "id": "7",
+        "name": "Signature Tiramisu Cold Coffee",
+        "price": "₹310"
+      }
+    ],
+    "cold-brew": [
+      {
+        "id": "1",
+        "name": "Classic Cold Brew",
+        "price": "₹250"
+      },
+      {
+        "id": "2",
+        "name": "Cranberry Cold Brew",
+        "price": "₹265"
+      },
+      {
+        "id": "3",
+        "name": "Vietnamese Cold Brew",
+        "price": "₹265"
+      },
+      {
+        "id": "4",
+        "name": "Coconut Cream Cold Brew",
+        "price": "₹265"
+      },
+      {
+        "id": "5",
+        "name": "Cream Cold Brew",
+        "price": "₹265"
+      },
+      {
+        "id": "6",
+        "name": "Choice of Milk",
+        "desc": "Almond / Oats / Soya / Lactose Free / Coconut",
+        "price": "+₹99",
+        "note": true
+      }
+    ],
+    "matcha": [
+      {
+        "id": "1",
+        "name": "Matcha Honey Latte",
+        "price": "₹240"
+      },
+      {
+        "id": "2",
+        "name": "Mango Matcha",
+        "price": "₹265"
+      },
+      {
+        "id": "3",
+        "name": "Coconut Cream Matcha",
+        "price": "₹265"
+      },
+      {
+        "id": "4",
+        "name": "Raspberry Iced Matcha",
+        "price": "₹265"
+      },
+      {
+        "id": "5",
+        "name": "Turkish Delight Matcha",
+        "price": "₹265"
+      }
+    ],
+    "frappe": [
+      {
+        "id": "1",
+        "name": "Toffee Apple Frappe",
+        "price": "₹265"
+      },
+      {
+        "id": "2",
+        "name": "Chocolate Orange Frappe",
+        "price": "₹265"
+      },
+      {
+        "id": "3",
+        "name": "Bloody Cherry Frappe",
+        "price": "₹265"
+      },
+      {
+        "id": "4",
+        "name": "Freaky Oreo Frappe",
+        "price": "₹265"
+      },
+      {
+        "id": "5",
+        "name": "Mint Choco Chip Frappe",
+        "price": "₹265"
+      }
+    ],
+    "smoothie": [
+      {
+        "id": "1",
+        "name": "Green Smoothie",
+        "price": "₹310"
+      },
+      {
+        "id": "2",
+        "name": "Matcha Vanilla Smoothie",
+        "price": "₹310"
+      },
+      {
+        "id": "3",
+        "name": "Avocado Mint Smoothie",
+        "price": "₹310"
+      },
+      {
+        "id": "4",
+        "name": "Blueberry Mint Smoothie",
+        "price": "₹310"
+      },
+      {
+        "id": "5",
+        "name": "Choice of Milk",
+        "desc": "Almond / Oats / Soya / Lactose Free / Coconut",
+        "price": "+₹99",
+        "note": true
+      }
+    ],
+    "hindi": [
+      {
+        "id": "1",
+        "name": "Sukku Kaffee",
+        "hindi": "सूक्कु",
+        "desc": "Espresso with dry ginger water",
+        "price": "₹220 / 250"
+      },
+      {
+        "id": "2",
+        "name": "Adrabat i",
+        "hindi": "अद्राबाती",
+        "desc": "Espresso with ginger & jaggery",
+        "price": "₹250 / 285"
+      },
+      {
+        "id": "3",
+        "name": "Gulbati",
+        "hindi": "गुलबाती",
+        "desc": "Milk, rose hint & dry rose petals",
+        "price": "₹250 / 285"
+      },
+      {
+        "id": "4",
+        "name": "Tvakbati",
+        "hindi": "त्वकबाती",
+        "desc": "Cinnamon infused coffee with milk",
+        "price": "₹250 / 285"
+      },
+      {
+        "id": "5",
+        "name": "Cocobat i",
+        "hindi": "कोकोबाती",
+        "desc": "Espresso with coconut & hot milk",
+        "price": "₹285"
+      },
+      {
+        "id": "6",
+        "name": "Shehalbati",
+        "hindi": "शेहलबाती",
+        "desc": "Turmeric with honey in warm coffee",
+        "price": "₹250 / 285"
+      },
+      {
+        "id": "7",
+        "name": "Cold Kaffee",
+        "sub": true
+      },
+      {
+        "id": "8",
+        "name": "Thandai Ice Latte",
+        "hindi": "ठंडाई",
+        "price": "₹265"
+      },
+      {
+        "id": "9",
+        "name": "Tropical Ice Chai",
+        "hindi": "ट्रॉपिकल",
+        "price": "₹265"
+      },
+      {
+        "id": "10",
+        "name": "Chai Kaffee",
+        "hindi": "चाय कॉफी",
+        "price": "₹265"
+      },
+      {
+        "id": "11",
+        "name": "Choice of Milk",
+        "desc": "Almond / Oats / Soya / Lactose Free / Coconut",
+        "price": "+₹99",
+        "note": true
+      }
+    ]
+  },
+  "food": {
+    "pasta": [
+      {
+        "id": "1",
+        "name": "Bechamel Sauce",
+        "desc": "Classic Italian white sauce with roux, cheese, milk & herbs",
+        "price": "₹355"
+      },
+      {
+        "id": "2",
+        "name": "Arrabiata Sauce",
+        "desc": "Spicy Italian red sauce with tomatoes & dried chilies",
+        "price": "₹355"
+      },
+      {
+        "id": "3",
+        "name": "Pink Sauce",
+        "desc": "Creamy + red sauce with tangy base & veggies",
+        "price": "₹355"
+      },
+      {
+        "id": "4",
+        "name": "Pesto Sauce",
+        "desc": "Fresh basil pesto with pine nuts, cream & parmesan",
+        "price": "₹355"
+      },
+      {
+        "id": "5",
+        "name": "Aglio e Olio",
+        "desc": "Garlic & olive oil with chili flakes",
+        "price": "₹355"
+      },
+      {
+        "id": "6",
+        "name": "Mac & Cheese",
+        "desc": "Three cheeses with herbs for creamy taste",
+        "price": "₹400"
+      },
+      {
+        "id": "7",
+        "name": "Lasagna",
+        "desc": "Layers of pasta, sautéed veggies, mashed potato & cheese",
+        "price": "₹400"
+      },
+      {
+        "id": "8",
+        "name": "Hot in Heaven",
+        "desc": "Chef's signature creamy spicy sauce with exotic veggies & mozzarella",
+        "price": "₹400"
+      }
+    ],
+    "salad": [
+      {
+        "id": "1",
+        "name": "Tadka Watermelon & Feta",
+        "desc": "Watermelon, feta, mint with khatti mithi spices, olive oil",
+        "price": "₹310"
+      },
+      {
+        "id": "2",
+        "name": "Hummus & Dates",
+        "desc": "Chickpea hummus with bell pepper, dates, olives, jalapeno",
+        "price": "₹310"
+      },
+      {
+        "id": "3",
+        "name": "Avocado & Mustard Vinaigrette",
+        "desc": "Avocado, tomato, cucumber, onion, olives, feta with mustard vinaigrette",
+        "price": "₹310"
+      },
+      {
+        "id": "4",
+        "name": "Super Quinoa & Avocado",
+        "desc": "Quinoa & avocado with orange dressing",
+        "price": "₹340"
+      },
+      {
+        "id": "5",
+        "name": "Raw Mango & Papaya",
+        "desc": "Green papaya & raw mango with aromatic herbs & tangy dressing",
+        "price": "₹310"
+      }
+    ],
+    "fries": [
+      {
+        "id": "1",
+        "name": "Classic Fries",
+        "desc": "Thin strips deep-fried until golden & crisp",
+        "price": "₹265"
+      },
+      {
+        "id": "2",
+        "name": "Sweet Potato Fries",
+        "desc": "Naturally sweet alternative",
+        "price": "₹295"
+      },
+      {
+        "id": "3",
+        "name": "Raw Banana Fries",
+        "desc": "Coated with Indian spices & house dip",
+        "price": "₹295"
+      },
+      {
+        "id": "4",
+        "name": "Parmesan & Roasted Garlic",
+        "desc": "Crispy fries with parmesan & roasted garlic",
+        "price": "₹340"
+      }
+    ],
+    "desi": [
+      {
+        "id": "1",
+        "name": "Raw Mango Papaya Bhel",
+        "desc": "Raw mango & papaya with sev & Indian spices",
+        "price": "₹310"
+      },
+      {
+        "id": "2",
+        "name": "Papri Jalapeno Cheese Balls",
+        "desc": "Spicy cheesy appetizer with jalapeno & cottage cheese",
+        "price": "₹310"
+      },
+      {
+        "id": "3",
+        "name": "Masala Guacamole",
+        "desc": "Avocado with Indian spices & lime, served with corn chips",
+        "price": "₹385"
+      },
+      {
+        "id": "4",
+        "name": "Tadka Hummus",
+        "desc": "Chickpea hummus with masala mirch tadka",
+        "price": "₹385"
+      },
+      {
+        "id": "5",
+        "name": "Jackfruit Galouti Kebab",
+        "desc": "Vegetarian twist on Awadhi galouti kebab",
+        "price": "₹385"
+      },
+      {
+        "id": "6",
+        "name": "Dahi Ke Shole",
+        "desc": "Yogurt & dry fruit stuffed rolls",
+        "price": "₹385"
+      },
+      {
+        "id": "7",
+        "name": "Hara Bhara Kebab",
+        "desc": "Spinach & green peas kebabs",
+        "price": "₹385"
+      },
+      {
+        "id": "8",
+        "name": "Litti Choka",
+        "desc": "Wheat flour balls with spiced sattu",
+        "price": "₹355"
+      },
+      {
+        "id": "9",
+        "name": "Bajra Nachos",
+        "desc": "Homemade bajra chips with masala cheese sauce",
+        "price": "₹385"
+      }
+    ],
+    "toast": [
+      {
+        "id": "1",
+        "name": "Cheese Garlic Toast",
+        "desc": "Butter, garlic & herbs on toasted bread",
+        "price": "₹250"
+      },
+      {
+        "id": "2",
+        "name": "Cheese Chilli Toast",
+        "desc": "Melted cheese with green chilli & veggies",
+        "price": "₹285"
+      },
+      {
+        "id": "3",
+        "name": "Creamy Mushroom Toast",
+        "desc": "Sautéed mushroom, feta cheese & herbs",
+        "price": "₹310"
+      },
+      {
+        "id": "4",
+        "name": "Masala Avocado Toast",
+        "desc": "Smashed avocado with tomatoes, coriander & Indian spices",
+        "price": "₹340"
+      },
+      {
+        "id": "5",
+        "name": "Sambar Spiced Paneer Toast",
+        "desc": "South Indian sambar flavors with paneer",
+        "price": "₹340"
+      },
+      {
+        "id": "6",
+        "name": "Kolhapuri Paneer Toast",
+        "desc": "Spicy Kolhapuri paneer on toast",
+        "price": "₹340"
+      }
+    ],
+    "croissant": [
+      {
+        "id": "1",
+        "name": "Butter Croissant",
+        "desc": "Flaky buttery pastry",
+        "price": "₹240"
+      },
+      {
+        "id": "2",
+        "name": "Caprese Croissant",
+        "desc": "Mozzarella, tomato, cucumber, lettuce, balsamic glaze",
+        "price": "₹295"
+      },
+      {
+        "id": "3",
+        "name": "Shroom Cheese Croissant",
+        "desc": "Sautéed mushroom, mozzarella, tomato, jalapeno",
+        "price": "₹310"
+      },
+      {
+        "id": "4",
+        "name": "Ghee Roast Pesto Croissant",
+        "desc": "Ghee roasted spices with pesto sauce",
+        "price": "₹310"
+      },
+      {
+        "id": "5",
+        "name": "Spinach & Cheesy Herb Bake",
+        "desc": "Pesto cream cheese, mozzarella, herbs, spinach, sun-dried tomatoes",
+        "price": "₹310"
+      }
+    ],
+    "main": [
+      {
+        "id": "1",
+        "name": "Pad Thai Noodles",
+        "desc": "Thai stir-fried rice noodles with peanuts & veggies",
+        "price": "₹400"
+      },
+      {
+        "id": "2",
+        "name": "Humshuka",
+        "desc": "Fusion of hummus & shakshuka with cream cheese & mozzarella",
+        "price": "₹400"
+      },
+      {
+        "id": "3",
+        "name": "Peri Peri Cottage Cheese Steak",
+        "desc": "Grilled paneer with spicy peri peri sauce",
+        "price": "₹445"
+      },
+      {
+        "id": "4",
+        "name": "Saag Bocconcini",
+        "desc": "Indian saag fused with Italian cheese",
+        "price": "₹445"
+      }
+    ],
+    "dessert": [
+      {
+        "id": "1",
+        "name": "Classic Brownie with Ice Cream",
+        "desc": "Rich cocoa brownie with vanilla ice cream",
+        "price": "₹310"
+      },
+      {
+        "id": "2",
+        "name": "Classic New York Cheese Cake",
+        "desc": "Dense, creamy on graham cracker crust",
+        "price": "₹310"
+      },
+      {
+        "id": "3",
+        "name": "Nutella Cheese Cake",
+        "desc": "Creamy cheesecake swirled with Nutella",
+        "price": "₹355"
+      },
+      {
+        "id": "4",
+        "name": "Lotus Biscoff Cheese Cake",
+        "desc": "Spiced Biscoff crust topped with Biscoff spread",
+        "price": "₹355"
+      },
+      {
+        "id": "5",
+        "name": "Nutella Almond Croissant",
+        "desc": "Croissant filled with Nutella & toasted almonds",
+        "price": "₹355"
+      },
+      {
+        "id": "6",
+        "name": "Choklad Pull Me",
+        "desc": "Chocolate sponge layered with dark & milk chocolate",
+        "price": "₹355"
+      }
+    ],
+    "breads": [
+      {
+        "id": "1",
+        "name": "Hara Bhara Pesto Mini Slider",
+        "desc": "Peas patty with peri peri sauce & pesto cream",
+        "price": "₹285"
+      },
+      {
+        "id": "2",
+        "name": "California Avocado Burger",
+        "desc": "Mexican cheese patty with avocado chutney & hot sauce",
+        "price": "₹310"
+      },
+      {
+        "id": "3",
+        "name": "Mushroom & Cheese Sandwich",
+        "desc": "Sautéed mushroom with mozzarella, tomato & jalapeno",
+        "price": "₹285"
+      },
+      {
+        "id": "4",
+        "name": "Thecha Paneer Sandwich",
+        "desc": "Spicy green thecha with grilled paneer",
+        "price": "₹285"
+      },
+      {
+        "id": "5",
+        "name": "Tikka Paneer Sandwich",
+        "desc": "Paneer tikka with cheese in toasted bread",
+        "price": "₹285"
+      }
+    ],
+    "naanza": [
+      {
+        "id": "1",
+        "name": "Caramelized Mushroom & Onion",
+        "desc": "Mushrooms, onion, melted cheese & herbs",
+        "price": "₹385"
+      },
+      {
+        "id": "2",
+        "name": "Masala Tikka",
+        "desc": "Spiced tikka chunks with capsicum, onion, tomato",
+        "price": "₹385"
+      },
+      {
+        "id": "3",
+        "name": "Thecha Pesto",
+        "desc": "Spicy thecha with pesto paneer cubes",
+        "price": "₹385"
+      },
+      {
+        "id": "4",
+        "name": "Farm Special",
+        "desc": "Bell peppers, onions, tomatoes, corn, olives",
+        "price": "₹385"
+      },
+      {
+        "id": "5",
+        "name": "Firey Paneer Naanza",
+        "desc": "Spicy creamy base with marinated paneer & veggies",
+        "price": "₹385"
+      }
+    ]
+  },
+  "ambiance": {
+    "label": "The Experience",
+    "heading": "Spaces Designed<br>for Moments",
+    "description": "Whether you're catching up with friends, working remotely, or simply escaping the city's rush — our spaces are crafted for you.",
+    "features": [
+      "Free high-speed WiFi",
+      "Cozy corners for conversations",
+      "Instagram-worthy corners",
+      "Pet-friendly outdoor seating"
+    ]
+  },
+  "locations": [
+    {
+      "id": "1",
+      "name": "Borivali West",
+      "badge": "Flagship",
+      "address": "Shop 1, Avanti B Apartments\nHaridas Nagar, Shimpoli Road\nMumbai 400092",
+      "phone": "+91 79771 81838",
+      "hours": "10:30am – 11:30pm",
+      "directionsUrl": "https://maps.google.com/?q=Cafe+Pibatie+Borivali",
+      "zomatoUrl": "https://www.zomato.com/mumbai/pibatie-1-borivali-west/order",
+      "swiggyUrl": "https://www.swiggy.com/city/mumbai/cafe-pibatie-haridas-nagar-borivali-rest866006",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d672.4301921526707!2d72.84692826406562!3d19.22157212011223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1b1e8dd816f%3A0x7ce59a577aa50d72!2sCafe%20Pibatie%20%7C%20Borivali!5e0!3m2!1sen!2sin!4v1772310335104!5m2!1sen!2sin"
+    },
+    {
+      "id": "2",
+      "name": "Oshiwara, Andheri West",
+      "badge": "New",
+      "address": "Shop 2/002, Ground Floor\nAnushka CHS, Ward K/W\nOshiwara, Mumbai",
+      "phone": "+91 93262 43023",
+      "hours": "10:00am – 11:00pm",
+      "directionsUrl": "https://maps.google.com/?q=Cafe+Pibatie+Andheri",
+      "zomatoUrl": "https://www.zomato.com/mumbai/cafe-pibatie-oshiwara/order",
+      "swiggyUrl": "https://www.swiggy.com/city/mumbai/cafe-pibatie-oshiwara-andheri-west-rest1113131",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.5682811316379!2d72.83059277866235!3d19.147427948269527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7d44d351551%3A0x1fc04ae93cd48881!2sCafe%20Pibatie%20%7C%20Andheri!5e0!3m2!1sen!2sin!4v1772310424653!5m2!1sen!2sin"
+    }
+  ],
+  "cta": {
+    "title": "Book a Table in Andheri",
+    "text": "Walk in, or book ahead. Either way, we'll save you the best seat.",
+    "bookingUrl": "https://www.zomato.com/mumbai/cafe-pibatie-oshiwara/book"
+  },
+  "reviews": [
+    {
+      "id": "1",
+      "stars": "5",
+      "text": "The staff was very nice, food was amazing, would 10/10 recommend you to blindly order anything which sounds nice because everything is super tastyyyyy especially the classic tiramisu dessert",
+      "author": "Ishani Joshi"
+    },
+    {
+      "id": "2",
+      "stars": "5",
+      "text": "Good food, nice ambiance. Great place to chill out with friends.",
+      "author": "Vishal Shetty"
+    },
+    {
+      "id": "3",
+      "stars": "5",
+      "text": "Staff was very warm and welcoming... we lovedcha pesto nanzaa... it was too delicious... ambience was very good... must visit!",
+      "author": "Divya Purohit"
+    },
+    {
+      "id": "4",
+      "stars": "5",
+      "text": "Simple, Sober, Good Vibes, Best taste. Overall worth visiting. Average 500-600 per person.",
+      "author": "Naresh M. Pathak"
+    },
+    {
+      "id": "5",
+      "stars": "5",
+      "text": "The Matcha Mango and Irish cream mocha was delicious. The place has the sweetest staff. Nice and chill cafe.",
+      "author": "Reena Turner"
+    },
+    {
+      "id": "6",
+      "stars": "5",
+      "text": "Menu is pretty diverse, ambience is amazing. It's so budget friendly.",
+      "author": "Saloni Ghadi"
+    },
+    {
+      "id": "7",
+      "stars": "5",
+      "text": "Good Food Good Vibes! Took myself on a solo date and had a wonderful time. The place has the sweetest staff.",
+      "author": "Hasti Desai"
+    },
+    {
+      "id": "8",
+      "stars": "5",
+      "text": "The café has a cozy and pleasant vibe. The coffee tastes great, and the staff is friendly. Perfect place to relax.",
+      "author": "Janhavi Vetkar"
+    },
+    {
+      "id": "9",
+      "stars": "5",
+      "text": "Very nice ambience and the food also tasted amazing… Good little evening snack place with your friends or partner",
+      "author": "Meet Gala"
+    },
+    {
+      "id": "10",
+      "stars": "5",
+      "text": "Sweetest staff and incredible matcha! 10/10 recommend!",
+      "author": "Erika Nicole Vaz"
+    },
+    {
+      "id": "11",
+      "stars": "5",
+      "text": "The food and the vibe is amazing. The service is fantastic. You must try the Lotus Milk Cake... unmissable!",
+      "author": "Harssh A Singh"
+    },
+    {
+      "id": "12",
+      "stars": "5",
+      "text": "I have visited Cafe Pibatie multiple times and it has consistently been a great experience. The ambience is pleasant and the food & beverages are excellent.",
+      "author": "Srija Ghosh"
+    },
+    {
+      "id": "13",
+      "stars": "5",
+      "text": "Love the food out here... always satisfied. Great place to visit with friends and family.",
+      "author": "Riddhi Vahi"
+    },
+    {
+      "id": "14",
+      "stars": "4",
+      "text": "Food is good. Service was little slow. But for good food its okay. I love raw papaya mango salad",
+      "author": "Akassh Kumarr Arya"
+    },
+    {
+      "id": "15",
+      "stars": "4",
+      "text": "The cafe has got a cozy vibe and really stands out as a go to cute date place.",
+      "author": "Karan Sharma"
+    },
+    {
+      "id": "16",
+      "stars": "5",
+      "text": "Food was delicious, and the ambiance was good.",
+      "author": "Varsha Yadav"
+    }
+  ],
+  "footer": {
+    "tagline": "Mumbai's favorite coffee destination.",
+    "instagramUrl": "https://www.instagram.com/cafepibatie",
+    "facebookUrl": "https://www.facebook.com/cafepibatie/",
+    "copyrightYear": "2026"
+  }
+}

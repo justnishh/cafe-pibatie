@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafe Pibatie - Mumbai's premium coffee destination. Specialty coffee, fusion cuisine, and artisanal drinks. Visit us at Borivali West or Oshiwara, Andheri West.">
+    <title>Cafe Pibatie | Artisanal Coffee & Fusion Cuisine</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@200;300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav__brand" aria-label="Cafe Pibatie Home">
+            <img src="assets/images/logo-icon.svg" alt="Cafe Pibatie" class="nav__logo">
+        </a>
+        <button class="nav__hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+            <span class="hamburger-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </nav>
+
+    <div class="mega-menu" id="megaMenu" role="dialog" aria-label="Navigation menu">
+        <div class="mega-menu__overlay" onclick="toggleMenu()"></div>
+        <div class="mega-menu__panel">
+            <button class="mega-menu__close" onclick="toggleMenu()" aria-label="Close menu">&times;</button>
+            <div class="mega-menu__items">
+                <a href="#story" class="mega-menu__item" onclick="toggleMenu()">
+                    <img src="assets/images/Header menu/pexels-esranurkalay-10276926.jpg" alt="Story">
+                    <span>Story</span>
+                </a>
+                <a href="#menu" class="mega-menu__item" onclick="toggleMenu()">
+                    <img src="assets/images/Header menu/pexels-umudicreative-17852535.jpg" alt="Menu">
+                    <span>Menu</span>
+                </a>
+                <a href="#ambiance" class="mega-menu__item" onclick="toggleMenu()">
+                    <img src="assets/images/Header menu/pexels-nastyasensei-66707-2575830.jpg" alt="Spaces">
+                    <span>Spaces</span>
+                </a>
+                <a href="#locations" class="mega-menu__item" onclick="toggleMenu()">
+                    <img src="assets/images/Header menu/pexels-polina-zimmerman-3747562.jpg" alt="Find Us">
+                    <span>Find Us</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+    <section class="hero">
+        <div class="hero__image">
+            <div class="hero__overlay"></div>
+            <video class="hero__video" autoplay muted loop playsinline>
+                <source src="assets/videos/4081317-uhd_3840_2160_24fps.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__title">Loading...</h1>
+            <p class="hero__subtitle">Loading...</p>
+        </div>
+    </section>
+
+    <section id="story" class="story">
+        <div class="story__grid">
+            <div class="story__visual">
+                <div class="story__image-stack">
+                    <img src="assets/images/Ambience/unnamed (9).webp" alt="Coffee preparation at Cafe Pibatie" loading="lazy">
+                    <img src="assets/images/Ambience/unnamed (8).webp" alt="Cafe Pibatie interior" loading="lazy">
+                </div>
+            </div>
+            <div class="story__text">
+                <span class="section-label">The Pibatie Way</span>
+                <h2 class="story__heading">Crafted for the<br>Curious Palate</h2>
+                <p class="story__paragraph">Loading...</p>
+                <p class="story__paragraph">Loading...</p>
+                <div class="story__stats">
+                    <div class="stat">
+                        <span class="stat__number">4.6★</span>
+                        <span class="stat__label">Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">2</span>
+                        <span class="stat__label">Locations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">₹800</span>
+                        <span class="stat__label">For Two</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="beverage-menu">
+        <div class="beverage-menu__header">
+            <span class="section-label">Our Menu</span>
+            <h2 class="beverage-menu__title">Beverages</h2>
+            <p class="beverage-menu__desc">Handcrafted drinks made with precision and passion</p>
+        </div>
+
+        <div class="beverage-tabs" id="beverageTabs"></div>
+
+        <div class="beverage-content" id="beverageContent"></div>
+    </section>
+
+    <section class="menu-section menu-section--dark" id="food-menu">
+        <div class="menu-section__header">
+            <span class="section-label">Our Menu</span>
+            <h2 class="menu-section__title">Food Menu</h2>
+            <p class="menu-section__desc">Flavors that bridge continents</p>
+        </div>
+
+        <div class="beverage-tabs" id="foodTabs"></div>
+
+        <div class="beverage-content" id="foodContent"></div>
+    </section>
+
+    <section id="ambiance" class="ambiance">
+        <div class="ambiance__split">
+            <div class="ambiance__text">
+                <span class="section-label">The Experience</span>
+                <h2 class="ambiance__title">Spaces Designed<br>for Moments</h2>
+                <p class="ambiance__desc">Loading...</p>
+                <ul class="ambiance__features" id="ambianceFeatures"></ul>
+            </div>
+            <div class="ambiance__gallery">
+                <div class="ambiance__image ambiance__image--tall">
+                    <img src="assets/images/Ambience/unnamed (7).webp" alt="Cafe interior seating" loading="lazy">
+                </div>
+                <div class="ambiance__image ambiance__image--wide">
+                    <img src="assets/images/Ambience/unnamed (6).webp" alt="Coffee bar counter" loading="lazy">
+                </div>
+                <div class="ambiance__image">
+                    <img src="assets/images/Ambience/unnamed (5).webp" alt="Cozy corner seating" loading="lazy">
+                </div>
+                <div class="ambiance__image">
+                    <img src="assets/images/Ambience/unnamed (4).webp" alt="Cafe ambiance" loading="lazy">
+                </div>
+                <div class="ambiance__image ambiance__image--wide">
+                    <img src="assets/images/Ambience/unnamed (3).webp" alt="Dining area" loading="lazy">
+                </div>
+                <div class="ambiance__image ambiance__image--tall">
+                    <img src="assets/images/Ambience/unnamed (2).webp" alt="Cafe atmosphere" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="locations">
+        <div class="locations__header">
+            <span class="section-label">Find Us</span>
+            <h2 class="locations__title">Visit Both Locations</h2>
+        </div>
+        
+        <div class="locations-container" id="locationsContainer"></div>
+    </section>
+
+    <section id="order-online" class="order-section">
+        <div class="order-section__header">
+            <span class="section-label">Online Ordering</span>
+            <h2 class="order-section__title">Order From Anywhere</h2>
+            <p class="order-section__desc">Delivery available through your favorite platforms</p>
+        </div>
+        <div class="order-platforms" id="orderPlatforms"></div>
+    </section>
+
+    <section class="cta">
+        <div class="cta__content">
+            <h2 class="cta__title">Book a Table in Andheri</h2>
+            <p class="cta__text">Walk in, or book ahead. Either way, we'll save you the best seat.</p>
+            <div class="cta__buttons cta__buttons--center">
+                <a href="#" target="_blank" class="cta__button cta__button--primary" id="ctaBookingBtn">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews__header">
+            <span class="section-label">Testimonials</span>
+            <h2 class="reviews__title">What Our Customers Say</h2>
+        </div>
+        <div class="reviews__carousel">
+            <button class="reviews__arrow reviews__arrow--prev" aria-label="Previous review">&#10094;</button>
+            <div class="reviews__grid" id="reviewsGrid"></div>
+            <button class="reviews__arrow reviews__arrow--next" aria-label="Next review">&#10095;</button>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <span class="footer__logo">Pibatie</span>
+                <p class="footer__tagline">Mumbai's favorite coffee destination.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#" target="_blank" id="footerInstagram">Instagram</a></li>
+                    <li><a href="#" target="_blank" id="footerFacebook">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; <span id="footerYear">2026</span> Cafe Pibatie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="popup-modal" id="menuPopup" role="dialog" aria-label="Menu image preview">
+        <div class="popup-modal__content">
+            <button class="popup-modal__close" onclick="closePopup()" aria-label="Close popup">&times;</button>
+            <img src="" alt="Menu" class="popup-modal__image" id="popupImage">
+            <p class="popup-modal__label" id="popupLabel"></p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        const beverageCategories = ['desi', 'hot-coffee', 'brewed', 'chai', 'doodh-chai', 'water', 'hot-choco', 'mocha', 'cold-coffee', 'iced', 'cold-brew', 'matcha', 'frappe', 'smoothie', 'hindi'];
+        const beverageCategoryNames = {
+            'desi': 'Desi Mocktails', 'hot-coffee': 'Hot Coffee', 'brewed': 'Brewed',
+            'chai': 'Chai', 'doodh-chai': 'Doodh Wali Chai', 'water': 'Water / Soda',
+            'hot-choco': 'Hot Chocolate', 'mocha': 'Mocha', 'cold-coffee': 'Cold Coffee',
+            'iced': 'Iced Coffee', 'cold-brew': 'Cold Brew', 'matcha': 'Matcha',
+            'frappe': 'Frappe', 'smoothie': 'Smoothie', 'hindi': 'Hindustani Kaffee'
+        };
+        
+        const foodCategories = ['pasta', 'salad', 'fries', 'desi', 'toast', 'croissant', 'main', 'dessert', 'breads', 'naanza'];
+        const foodCategoryNames = {
+            'pasta': 'Pasta', 'salad': 'Salad', 'fries': 'Fries', 'desi': 'Desi Fusion',
+            'toast': 'Toast', 'croissant': 'Croissant', 'main': 'Main Course',
+            'dessert': 'Dessert', 'breads': 'Breads', 'naanza': 'Naanza'
+        };
+        
+        let contentData = {};
+        
+        async function loadContent() {
+            try {
+                const res = await fetch('/api/content');
+                contentData = await res.json();
+                renderContent();
+            } catch (err) {
+                console.error('Failed to load content:', err);
+            }
+        }
+        
+        function renderContent() {
+            renderHero();
+            renderStory();
+            renderBeverages();
+            renderFood();
+            renderAmbiance();
+            renderLocations();
+            renderCTA();
+            renderReviews();
+            renderFooter();
+        }
+        
+        function renderHero() {
+            if (contentData.hero) {
+                document.querySelector('.hero__title').textContent = contentData.hero.title || '';
+                document.querySelector('.hero__subtitle').textContent = contentData.hero.subtitle || '';
+            }
+        }
+        
+        function renderStory() {
+            if (contentData.story) {
+                const story = contentData.story;
+                document.querySelector('.section-label').textContent = story.label || '';
+                document.querySelector('.story__heading').innerHTML = story.heading || '';
+                const paras = document.querySelectorAll('.story__paragraph');
+                if (paras[0]) paras[0].textContent = story.paragraphs?.[0] || '';
+                if (paras[1]) paras[1].textContent = story.paragraphs?.[1] || '';
+                
+                if (story.stats) {
+                    document.querySelector('.stat__number').textContent = story.stats.rating || '';
+                    document.querySelectorAll('.stat__label')[0].textContent = story.stats.ratingLabel || '';
+                    document.querySelectorAll('.stat__number')[1].textContent = story.stats.locations || '';
+                    document.querySelectorAll('.stat__label')[1].textContent = story.stats.locationsLabel || '';
+                    document.querySelectorAll('.stat__number')[2].textContent = story.stats.forTwo || '';
+                    document.querySelectorAll('.stat__label')[2].textContent = story.stats.forTwoLabel || '';
+                }
+            }
+        }
+        
+        function renderBeverages() {
+            const tabsContainer = document.getElementById('beverageTabs');
+            const contentContainer = document.getElementById('beverageContent');
+            
+            tabsContainer.innerHTML = beverageCategories.map(cat => 
+                `<button class="beverage-tab ${cat === 'desi' ? 'active' : ''}" data-tab="${cat}">${beverageCategoryNames[cat]}</button>`
+            ).join('');
+            
+            contentContainer.innerHTML = beverageCategories.map(cat => {
+                const items = contentData.beverages?.[cat] || [];
+                return `
+                    <div class="beverage-panel ${cat === 'desi' ? 'active' : ''}" id="${cat}">
+                        <div class="beverage-list">
+                            ${items.map(item => renderBeverageItem(item)).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function renderBeverageItem(item) {
+            if (item.sub) {
+                return `<div class="beverage-item beverage-item--sub">${item.name}</div>`;
+            }
+            return `
+                <div class="beverage-item${item.note ? ' beverage-item--note' : ''}">
+                    <div class="beverage-item__name">${item.name} ${item.hindi ? `<span class="beverage-item__hindi">(${item.hindi})</span>` : ''}</div>
+                    ${item.desc ? `<div class="beverage-item__desc">${item.desc}</div>` : ''}
+                    <div class="beverage-item__price">${item.price}</div>
+                </div>
+            `;
+        }
+        
+        function renderFood() {
+            const tabsContainer = document.getElementById('foodTabs');
+            const contentContainer = document.getElementById('foodContent');
+            
+            tabsContainer.innerHTML = foodCategories.map((cat, i) => 
+                `<button class="beverage-tab ${cat === 'naanza' ? 'active' : ''}" data-tab="food-${cat}">${foodCategoryNames[cat]}</button>`
+            ).join('');
+            
+            contentContainer.innerHTML = foodCategories.map((cat, i) => {
+                const items = contentData.food?.[cat] || [];
+                return `
+                    <div class="beverage-panel ${cat === 'naanza' ? 'active' : ''}" id="food-${cat}">
+                        <div class="beverage-list">
+                            ${items.map(item => `
+                                <div class="beverage-item${item.note ? ' beverage-item--note' : ''}">
+                                    <div class="beverage-item__name">${item.name} ${item.hindi ? `<span class="beverage-item__hindi">(${item.hindi})</span>` : ''}</div>
+                                    ${item.desc ? `<div class="beverage-item__desc">${item.desc}</div>` : ''}
+                                    <div class="beverage-item__price">${item.price}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            document.querySelectorAll('#foodTabs .beverage-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.dataset.tab;
+                    const parentSection = tab.closest('.menu-section');
+                    parentSection.querySelectorAll('.beverage-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    parentSection.querySelectorAll('.beverage-panel').forEach(panel => panel.classList.remove('active'));
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        }
+        
+        function renderAmbiance() {
+            if (contentData.ambiance) {
+                const amb = contentData.ambiance;
+                document.querySelector('.ambiance__text .section-label').textContent = amb.label || '';
+                document.querySelector('.ambiance__title').innerHTML = amb.heading || '';
+                document.querySelector('.ambiance__desc').textContent = amb.description || '';
+                
+                const featuresList = document.getElementById('ambianceFeatures');
+                featuresList.innerHTML = (amb.features || []).map(f => `<li>${f}</li>`).join('');
+            }
+        }
+        
+        function renderLocations() {
+            const container = document.getElementById('locationsContainer');
+            const orderContainer = document.getElementById('orderPlatforms');
+            
+            if (contentData.locations) {
+                container.innerHTML = contentData.locations.map(loc => `
+                    <div class="location-card">
+                        <span class="location-card__badge">${loc.badge || ''}</span>
+                        <h3 class="location-card__name">${loc.name}</h3>
+                        <div class="location-card__map">
+                            <iframe src="${loc.mapEmbed || ''}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <address class="location-card__address">${loc.address?.replace(/\n/g, '<br>') || ''}</address>
+                        <div class="location-card__meta">
+                            <span class="location-card__hours">Open: ${loc.hours || ''}</span>
+                            <a href="tel:${loc.phone?.replace(/[^0-9+]/g, '')}" class="location-card__phone">${loc.phone || ''}</a>
+                        </div>
+                        <a href="${loc.directionsUrl || '#'}" target="_blank" class="location-card__directions">Get Directions →</a>
+                        <div class="location-card__order">
+                            <a href="${loc.zomatoUrl || '#'}" target="_blank" class="order-link">Zomato</a>
+                            <a href="${loc.swiggyUrl || '#'}" target="_blank" class="order-link">Swiggy</a>
+                        </div>
+                    </div>
+                `).join('');
+                
+                orderContainer.innerHTML = contentData.locations.map(loc => `
+                    <div class="order-platform">
+                        <h3 class="order-platform__name">${loc.name}</h3>
+                        <div class="order-platform__links">
+                            <a href="${loc.zomatoUrl || '#'}" target="_blank" class="order-platform__btn order-platform__btn--zomato">Order on Zomato</a>
+                            <a href="${loc.swiggyUrl || '#'}" target="_blank" class="order-platform__btn order-platform__btn--swiggy">Order on Swiggy</a>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        function renderCTA() {
+            if (contentData.cta) {
+                document.querySelector('.cta__title').textContent = contentData.cta.title || '';
+                document.querySelector('.cta__text').textContent = contentData.cta.text || '';
+                document.getElementById('ctaBookingBtn').href = contentData.cta.bookingUrl || '#';
+            }
+        }
+        
+        function renderReviews() {
+            const container = document.getElementById('reviewsGrid');
+            if (contentData.reviews) {
+                container.innerHTML = contentData.reviews.map(review => `
+                    <div class="review-card">
+                        <div class="review-card__stars">${'★'.repeat(parseInt(review.stars))}${'☆'.repeat(5 - parseInt(review.stars))}</div>
+                        <p class="review-card__text">"${review.text}"</p>
+                        <span class="review-card__author">- ${review.author}</span>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        function renderFooter() {
+            if (contentData.footer) {
+                document.querySelector('.footer__tagline').textContent = contentData.footer.tagline || '';
+                document.getElementById('footerInstagram').href = contentData.footer.instagramUrl || '#';
+                document.getElementById('footerFacebook').href = contentData.footer.facebookUrl || '#';
+                document.getElementById('footerYear').textContent = contentData.footer.copyrightYear || '';
+            }
+            if (contentData.site) {
+                document.title = contentData.site.title || 'Cafe Pibatie';
+                document.querySelector('meta[name="description"]').content = contentData.site.description || '';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            loadContent();
+            
+            document.querySelectorAll('#beverageTabs .beverage-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.dataset.tab;
+                    const parentSection = tab.closest('.beverage-menu');
+                    parentSection.querySelectorAll('.beverage-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    parentSection.querySelectorAll('.beverage-panel').forEach(panel => panel.classList.remove('active'));
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

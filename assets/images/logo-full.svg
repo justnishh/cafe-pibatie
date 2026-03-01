@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <defs>
+    <linearGradient id="pibatieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#2d2d2d"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Icon - Abstract P with fluid wave -->
+  <g transform="translate(15, 10)">
+    <!-- P stem with wave -->
+    <path d="M8 0 L8 48 Q8 58 20 58 Q32 58 32 48 L32 30 Q32 22 24 22 Q16 22 16 30 L16 8 L48 8 Q56 8 56 16 Q56 24 48 24 L32 24 L32 0 L8 0 Z" fill="url(#pibatieGrad)"/>
+    
+    <!-- Coffee ring accent -->
+    <ellipse cx="38" cy="44" rx="10" ry="4" fill="none" stroke="#c45a3b" stroke-width="2.5" transform="rotate(-15, 38, 44)"/>
+    
+    <!-- Terracotta accent dot -->
+    <circle cx="52" cy="6" r="5" fill="#c45a3b"/>
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="80" y="50" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="600" fill="#1a1a1a" letter-spacing="-1">ibatie</text>
+</svg>
