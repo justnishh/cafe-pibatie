@@ -715,93 +715,102 @@
                 <h1>Plugins</h1>
             </div>
             
-            <!-- WhatsApp Chat -->
-            <div class="card">
-                <h3>WhatsApp Chat</h3>
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox" id="whatsappEnabled"> Enable WhatsApp Chat
-                    </label>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number (with country code, no +)</label>
-                    <input type="text" id="whatsappPhone" placeholder="917977181838">
-                </div>
-                <div class="form-group">
-                    <label>Position</label>
-                    <select id="whatsappPosition">
-                        <option value="right">Right</option>
-                        <option value="left">Left</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Greeting Message</label>
-                    <input type="text" id="whatsappGreeting" placeholder="Hi! How can we help you?">
-                </div>
-                <div class="form-group">
-                    <label>Header Text</label>
-                    <input type="text" id="whatsappHeader" placeholder="Chat with us">
-                </div>
-            </div>
+            <style>
+                .plugins-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px; }
+                @media (max-width: 768px) { .plugins-grid { grid-template-columns: 1fr; } }
+                .plugin-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+                .plugin-card h3 { margin-bottom: 15px; color: #1a1a2e; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+                .checkbox-label { display: flex; align-items: center; gap: 10px; cursor: pointer; margin-bottom: 15px; }
+                .checkbox-label input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
+            </style>
             
-            <!-- Cookie Consent -->
-            <div class="card">
-                <h3>Cookie Consent</h3>
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox" id="cookieEnabled"> Enable Cookie Consent Banner
+            <div class="plugins-grid">
+                <!-- WhatsApp Chat -->
+                <div class="plugin-card">
+                    <h3>WhatsApp Chat</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="whatsappEnabled">
+                        <span>Enable WhatsApp Chat</span>
                     </label>
+                    <div class="form-group">
+                        <label>Phone Number (with country code, no +)</label>
+                        <input type="text" id="whatsappPhone" placeholder="917977181838">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Position</label>
+                            <select id="whatsappPosition">
+                                <option value="right">Right</option>
+                                <option value="left">Left</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Greeting Message</label>
+                        <input type="text" id="whatsappGreeting" placeholder="Hi! How can we help you?">
+                    </div>
+                    <div class="form-group">
+                        <label>Header Text</label>
+                        <input type="text" id="whatsappHeader" placeholder="Chat with us">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea id="cookieMessage">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</textarea>
-                </div>
-                <div class="form-group">
-                    <label>Button Text</label>
-                    <input type="text" id="cookieButton" value="Accept All">
-                </div>
-                <div class="form-group">
-                    <label>Privacy Policy URL</label>
-                    <input type="text" id="cookiePolicy" placeholder="https://example.com/privacy">
-                </div>
-            </div>
-            
-            <!-- Google Reviews -->
-            <div class="card">
-                <h3>Google Reviews</h3>
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox" id="googleReviewsEnabled"> Enable Google Reviews
+                
+                <!-- Cookie Consent -->
+                <div class="plugin-card">
+                    <h3>Cookie Consent</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="cookieEnabled">
+                        <span>Enable Cookie Consent Banner</span>
                     </label>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="cookieMessage">We use cookies to enhance your experience.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Button Text</label>
+                        <input type="text" id="cookieButton" value="Accept All">
+                    </div>
+                    <div class="form-group">
+                        <label>Privacy Policy URL</label>
+                        <input type="text" id="cookiePolicy" placeholder="https://example.com/privacy">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Google Place ID</label>
-                    <input type="text" id="googleReviewsPlaceId" placeholder="ChIJKc...">
-                </div>
-            </div>
-            
-            <!-- Instagram Feed -->
-            <div class="card">
-                <h3>Instagram Feed</h3>
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox" id="instagramEnabled"> Enable Instagram Feed
+                
+                <!-- Google Reviews -->
+                <div class="plugin-card">
+                    <h3>Google Reviews</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="googleReviewsEnabled">
+                        <span>Enable Google Reviews Section</span>
                     </label>
+                    <div class="form-group">
+                        <label>Google Place ID</label>
+                        <input type="text" id="googleReviewsPlaceId" placeholder="ChIJKc...">
+                    </div>
+                    <p style="font-size:12px;color:#666;margin-top:10px;">Get your Place ID from <a href="https://developers.google.com/maps/documentation/places/web-service-place-id" target="_blank">Google Place ID Finder</a></p>
                 </div>
-                <div class="form-group">
-                    <label>Instagram Username</label>
-                    <input type="text" id="instagramUsername" placeholder="cafepibatie">
+                
+                <!-- Instagram Feed -->
+                <div class="plugin-card">
+                    <h3>Instagram Feed</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="instagramEnabled">
+                        <span>Enable Instagram Feed Section</span>
+                    </label>
+                    <div class="form-group">
+                        <label>Instagram Username</label>
+                        <input type="text" id="instagramUsername" placeholder="cafepibatie">
+                    </div>
                 </div>
             </div>
             
             <!-- Customer Support FAQ -->
-            <div class="card">
+            <div class="card" style="margin-bottom:20px;">
                 <h3>Customer Support FAQ</h3>
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox" id="faqEnabled"> Enable FAQ Section
-                    </label>
-                </div>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="faqEnabled">
+                    <span>Enable FAQ Section</span>
+                </label>
                 <div id="faqContainer"></div>
                 <button class="btn btn-secondary" onclick="addFaq()">+ Add FAQ</button>
             </div>

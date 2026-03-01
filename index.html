@@ -243,17 +243,22 @@
     <div id="pluginsContainer"></div>
 
     <!-- WhatsApp Chat Widget -->
-    <div id="whatsappChatWidget" style="display:none;position:fixed;bottom:20px;z-index:9999;max-width:350px;font-family:'DM Sans',sans-serif;">
+    <div id="whatsappChatWidget" style="display:none;position:fixed;bottom:90px;z-index:99999;max-width:320px;font-family:'DM Sans',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.15);border-radius:10px;overflow:hidden;">
         <div style="background:#25D366;color:white;padding:15px;border-radius:10px 10px 0 0;display:flex;align-items:center;gap:10px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             <span id="whatsappHeaderText">Chat with us</span>
             <button onclick="document.getElementById('whatsappChatWidget').style.display='none'" style="margin-left:auto;background:none;border:none;color:white;cursor:pointer;font-size:20px;">&times;</button>
         </div>
-        <div style="background:white;padding:15px;border-radius:0 0 10px 10px;box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+        <div style="background:white;padding:15px;border-radius:0 0 10px 10px;">
             <p id="whatsappGreetingText" style="margin-bottom:15px;font-size:14px;color:#333;">Hi! How can we help you?</p>
-            <a id="whatsappLink" href="#" target="_blank" style="display:inline-block;background:#25D366;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;font-size:14px;">Start Chat</a>
+            <a id="whatsappLink" href="#" target="_blank" style="display:block;background:#25D366;color:white;padding:12px 20px;border-radius:25px;text-decoration:none;font-size:14px;text-align:center;font-weight:500;">Start Chat</a>
         </div>
     </div>
+    
+    <!-- WhatsApp Float Button -->
+    <a id="whatsappFloatBtn" href="#" target="_blank" style="display:none;position:fixed;bottom:20px;z-index:99999;width:60px;height:60px;background:#25D366;border-radius:50%;box-shadow:0 4px 15px rgba(37,211,102,0.4);display:flex;align-items:center;justify-content:center;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
 
     <script src="js/main.js"></script>
     <script src="js/analytics.js"></script>
@@ -489,25 +494,24 @@
         function initPlugins() {
             const plugins = contentData.plugins || {};
             
-            // WhatsApp Chat
+            // WhatsApp Chat - Show floating button
             if (plugins.whatsappChat && plugins.whatsappChat.enabled) {
                 const w = plugins.whatsappChat;
-                const widget = document.getElementById('whatsappChatWidget');
-                widget.style.display = 'block';
-                widget.style[w.position === 'left' ? 'left' : 'right'] = '20px';
-                document.getElementById('whatsappHeaderText').textContent = w.headerText || 'Chat with us';
-                document.getElementById('whatsappGreetingText').textContent = w.greeting || 'Hi! How can we help you?';
+                const floatBtn = document.getElementById('whatsappFloatBtn');
+                floatBtn.style.display = 'flex';
+                floatBtn.style[w.position === 'left' ? 'left' : 'right'] = '20px';
+                
                 const phone = w.phone.replace(/\D/g, '');
-                document.getElementById('whatsappLink').href = `https://wa.me/${phone}?text=${encodeURIComponent(w.greeting || '')}`;
+                floatBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(w.greeting || '')}`;
             }
             
-            // Cookie Consent
+            // Cookie Consent with smooth animation
             if (plugins.cookieConsent && plugins.cookieConsent.enabled) {
                 if (!localStorage.getItem('cookieConsent')) {
                     const c = plugins.cookieConsent;
                     const cookieBanner = document.createElement('div');
                     cookieBanner.id = 'cookieBanner';
-                    cookieBanner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:white;padding:20px;z-index:99999;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;font-family:DM Sans,sans-serif;';
+                    cookieBanner.style.cssText = 'position:fixed;bottom:-100px;left:0;right:0;background:#1a1a2e;color:white;padding:20px;z-index:99999;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;font-family:DM Sans,sans-serif;transition:bottom 0.5s ease;';
                     cookieBanner.innerHTML = `
                         <p style="flex:1;min-width:250px;margin:0;">${c.message}</p>
                         <div style="display:flex;gap:10px;">
@@ -516,31 +520,86 @@
                         </div>
                     `;
                     document.body.appendChild(cookieBanner);
+                    setTimeout(() => { cookieBanner.style.bottom = '0'; }, 100);
                     document.getElementById('acceptCookies').addEventListener('click', () => {
-                        localStorage.setItem('cookieConsent', 'true');
-                        cookieBanner.remove();
+                        cookieBanner.style.bottom = '-100px';
+                        setTimeout(() => {
+                            localStorage.setItem('cookieConsent', 'true');
+                            cookieBanner.remove();
+                        }, 500);
                     });
                 }
             }
             
-            // Google Reviews (placeholder - would need Google Reviews Widget embed)
-            if (plugins.googleReviews && plugins.googleReviews.enabled) {
-                console.log('Google Reviews enabled - Place ID:', plugins.googleReviews.placeId);
+            // Google Reviews Section
+            if (plugins.googleReviews && plugins.googleReviews.enabled && plugins.googleReviews.placeId) {
+                const grSection = document.createElement('section');
+                grSection.id = 'google-reviews';
+                grSection.className = 'google-reviews';
+                grSection.style.cssText = 'padding:80px 20px;background:#f9f9f9;';
+                grSection.innerHTML = `
+                    <div style="max-width:1200px;margin:0 auto;">
+                        <h2 style="text-align:center;margin-bottom:40px;font-family:Playfair Display,serif;font-size:36px;">What Our Customers Say</h2>
+                        <div style="display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;">
+                            <iframe src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=${encodeURIComponent(plugins.googleReviews.placeId)}&t=&z=15&ie=UTF8&iwloc=B&output=embed" width="100%" height="500" style="border:0;border-radius:12px;" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <p style="text-align:center;margin-top:20px;font-size:14px;color:#666;">Reviews from Google</p>
+                    </div>
+                `;
+                document.getElementById('main-content').appendChild(grSection);
             }
             
-            // Instagram Feed (placeholder - would need Instagram embed)
-            if (plugins.instagramFeed && plugins.instagramFeed.enabled) {
-                console.log('Instagram Feed enabled - Username:', plugins.instagramFeed.username);
+            // Instagram Feed Section
+            if (plugins.instagramFeed && plugins.instagramFeed.enabled && plugins.instagramFeed.username) {
+                const igSection = document.createElement('section');
+                igSection.id = 'instagram-feed';
+                igSection.className = 'instagram-feed';
+                igSection.style.cssText = 'padding:80px 20px;';
+                igSection.innerHTML = `
+                    <div style="max-width:1200px;margin:0 auto;">
+                        <h2 style="text-align:center;margin-bottom:40px;font-family:Playfair Display,serif;font-size:36px;">Follow Us on Instagram</h2>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;">
+                            <a href="https://instagram.com/${plugins.instagramFeed.username}" target="_blank" style="position:relative;padding-bottom:100%;display:block;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:8px;overflow:hidden;">
+                                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:white;font-size:24px;text-align:center;">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    <br>@${plugins.instagramFeed.username}
+                                </div>
+                            </a>
+                            <a href="https://instagram.com/${plugins.instagramFeed.username}" target="_blank" style="position:relative;padding-bottom:100%;display:block;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:8px;overflow:hidden;">
+                                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:white;font-size:24px;text-align:center;">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    <br>@${plugins.instagramFeed.username}
+                                </div>
+                            </a>
+                            <a href="https://instagram.com/${plugins.instagramFeed.username}" target="_blank" style="position:relative;padding-bottom:100%;display:block;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:8px;overflow:hidden;">
+                                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:white;font-size:24px;text-align:center;">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    <br>@${plugins.instagramFeed.username}
+                                </div>
+                            </a>
+                            <a href="https://instagram.com/${plugins.instagramFeed.username}" target="_blank" style="position:relative;padding-bottom:100%;display:block;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:8px;overflow:hidden;">
+                                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:white;font-size:24px;text-align:center;">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    <br>@${plugins.instagramFeed.username}
+                                </div>
+                            </a>
+                        </div>
+                        <p style="text-align:center;margin-top:30px;">
+                            <a href="https://instagram.com/${plugins.instagramFeed.username}" target="_blank" style="display:inline-block;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;padding:12px 30px;border-radius:25px;text-decoration:none;font-weight:500;">Follow @${plugins.instagramFeed.username}</a>
+                        </p>
+                    </div>
+                `;
+                document.getElementById('main-content').appendChild(igSection);
             }
             
-            // Customer Support FAQ
+            // Customer Support FAQ with smooth animation
             if (plugins.customerSupport && plugins.customerSupport.enabled && plugins.customerSupport.faqs) {
                 const faqSection = document.createElement('section');
                 faqSection.id = 'faq';
                 faqSection.className = 'faq';
                 faqSection.style.cssText = 'padding:80px 20px;max-width:800px;margin:0 auto;';
                 faqSection.innerHTML = `
-                    <h2 style="text-align:center;margin-bottom:40px;font-family:Playfair Display,serif;">Frequently Asked Questions</h2>
+                    <h2 style="text-align:center;margin-bottom:40px;font-family:Playfair Display,serif;font-size:36px;">Frequently Asked Questions</h2>
                     <div class="faq-list"></div>
                 `;
                 const faqList = faqSection.querySelector('.faq-list');
@@ -548,15 +607,33 @@
                     const item = document.createElement('div');
                     item.style.cssText = 'margin-bottom:15px;border:1px solid #eee;border-radius:8px;overflow:hidden;';
                     item.innerHTML = `
-                        <div class="faq-question" style="padding:15px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#f9f9f9;font-weight:500;" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">
+                        <div class="faq-question" data-index="${i}" style="padding:15px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#f9f9f9;font-weight:500;transition:background 0.3s;">
                             ${faq.question}
-                            <span style="font-size:20px;">+</span>
+                            <span class="faq-icon" style="font-size:20px;transition:transform 0.3s;">+</span>
                         </div>
-                        <div class="faq-answer" style="padding:15px 20px;display:none;color:#666;line-height:1.6;">${faq.answer}</div>
+                        <div class="faq-answer" data-index="${i}" style="padding:0 20px;max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;color:#666;line-height:1.6;">${faq.answer}</div>
                     `;
                     faqList.appendChild(item);
                 });
                 document.getElementById('main-content').appendChild(faqSection);
+                
+                // Add click handlers for smooth FAQ animation
+                document.querySelectorAll('.faq-question').forEach(question => {
+                    question.addEventListener('click', function() {
+                        const index = this.dataset.index;
+                        const answer = document.querySelector(`.faq-answer[data-index="${index}"]`);
+                        const icon = this.querySelector('.faq-icon');
+                        if (answer.style.maxHeight === '0px' || answer.style.maxHeight === '') {
+                            answer.style.maxHeight = '200px';
+                            answer.style.padding = '15px 20px';
+                            icon.style.transform = 'rotate(45deg)';
+                        } else {
+                            answer.style.maxHeight = '0';
+                            answer.style.padding = '0 20px';
+                            icon.style.transform = 'rotate(0)';
+                        }
+                    });
+                });
             }
         }
         
