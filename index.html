@@ -185,7 +185,7 @@
             <h2 class="cta__title">Book a Table in Andheri</h2>
             <p class="cta__text">Walk in, or book ahead. Either way, we'll save you the best seat.</p>
             <div class="cta__buttons cta__buttons--center">
-                <a href="#" target="_blank" class="cta__button cta__button--primary" id="ctaBookingBtn">Book a Table</a>
+                <a href="https://www.zomato.com/mumbai/cafe-pibatie-oshiwara/book" target="_blank" class="cta__button cta__button--primary">Book a Table</a>
             </div>
         </div>
     </section>
@@ -440,14 +440,7 @@
         }
         
         function renderCTA() {
-            if (contentData.cta) {
-                document.querySelector('.cta__title').textContent = contentData.cta.title || '';
-                document.querySelector('.cta__text').textContent = contentData.cta.text || '';
-                const ctaBtn = document.getElementById('ctaBookingBtn');
-                if (ctaBtn && contentData.cta.bookingUrl) {
-                    ctaBtn.href = contentData.cta.bookingUrl;
-                }
-            }
+            // Static CTA - no dynamic rendering needed
         }
         
         function renderReviews() {
