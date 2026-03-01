@@ -942,10 +942,15 @@
         function renderBeverages() {
             try {
                 const tabsContainer = document.getElementById('beverageTabs');
-                if (!tabsContainer) {
-                    console.error('beverageTabs not found');
+                const itemsContainer = document.getElementById('beverageItems');
+                
+                if (!tabsContainer || !itemsContainer) {
+                    console.error('beverageTabs or beverageItems not found');
+                    console.log('tabsContainer:', tabsContainer);
+                    console.log('itemsContainer:', itemsContainer);
                     return;
                 }
+                
                 tabsContainer.innerHTML = '';
                 Object.keys(beverageCategories).forEach(cat => {
                     const btn = document.createElement('button');
@@ -961,20 +966,36 @@
         }
         
         function renderFood() {
-            const tabsContainer = document.getElementById('foodTabs');
-            tabsContainer.innerHTML = '';
-            Object.keys(foodCategories).forEach(cat => {
-                const btn = document.createElement('button');
-                btn.className = `tab ${cat === currentFoodTab ? 'active' : ''}`;
-                btn.textContent = foodCategories[cat];
-                btn.onclick = () => { currentFoodTab = cat; renderFood(); };
-                tabsContainer.appendChild(btn);
-            });
-            renderMenuItems('food', currentFoodTab);
+            try {
+                const tabsContainer = document.getElementById('foodTabs');
+                const itemsContainer = document.getElementById('foodItems');
+                
+                if (!tabsContainer || !itemsContainer) {
+                    console.error('foodTabs or foodItems not found');
+                    return;
+                }
+                
+                tabsContainer.innerHTML = '';
+                Object.keys(foodCategories).forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.className = `tab ${cat === currentFoodTab ? 'active' : ''}`;
+                    btn.textContent = foodCategories[cat];
+                    btn.onclick = () => { currentFoodTab = cat; renderFood(); };
+                    tabsContainer.appendChild(btn);
+                });
+                renderMenuItems('food', currentFoodTab);
+            } catch (err) {
+                console.error('Error rendering food:', err);
+            }
         }
         
         function renderMenuItems(section, category) {
-            const container = document.getElementById(section + 'Items');
+            const containerId = section === 'beverages' ? 'beverageItems' : (section === 'food' ? 'foodItems' : section + 'Items');
+            const container = document.getElementById(containerId);
+            if (!container) {
+                console.error('Container not found:', containerId);
+                return;
+            }
             container.innerHTML = `
                 <button class="btn btn-primary" onclick="openItemModal('${section}', '${category}')">Add New Item</button>
                 <div class="menu-items-list">
