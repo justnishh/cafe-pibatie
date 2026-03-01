@@ -209,7 +209,7 @@ app.put('/api/content/:section', [
     }
 
     const { section } = req.params;
-    const allowedSections = ['hero', 'story', 'ambiance', 'locations', 'cta', 'footer', 'site', 'reviews'];
+    const allowedSections = ['hero', 'story', 'ambiance', 'locations', 'cta', 'footer', 'site', 'reviews', 'plugins'];
     
     if (!allowedSections.includes(section)) {
         return res.status(400).json({ error: 'Invalid section' });
