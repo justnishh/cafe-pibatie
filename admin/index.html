@@ -840,10 +840,34 @@
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.getElementById(section).classList.add('active');
             
-            if (section === 'beverages') renderBeverages();
-            if (section === 'food') renderFood();
-            if (section === 'locations') renderLocations();
-            if (section === 'reviews') renderReviews();
+            if (section === 'beverages') {
+                if (Object.keys(contentData).length > 0) {
+                    renderBeverages();
+                } else {
+                    loadContent().then(() => renderBeverages());
+                }
+            }
+            if (section === 'food') {
+                if (Object.keys(contentData).length > 0) {
+                    renderFood();
+                } else {
+                    loadContent().then(() => renderFood());
+                }
+            }
+            if (section === 'locations') {
+                if (Object.keys(contentData).length > 0) {
+                    renderLocations();
+                } else {
+                    loadContent().then(() => renderLocations());
+                }
+            }
+            if (section === 'reviews') {
+                if (Object.keys(contentData).length > 0) {
+                    renderReviews();
+                } else {
+                    loadContent().then(() => renderReviews());
+                }
+            }
         }
         
         async function loadContent() {
@@ -851,6 +875,9 @@
             contentData = await res.json();
             populateFormFields();
             updateDashboard();
+            if (document.getElementById('beverages').classList.contains('active')) {
+                renderBeverages();
+            }
         }
         
         function populateFormFields() {
