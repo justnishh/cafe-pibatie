@@ -1072,5 +1072,38 @@
     "instagramUrl": "https://www.instagram.com/cafepibatie",
     "facebookUrl": "https://www.facebook.com/cafepibatie/",
     "copyrightYear": "2026"
+  },
+  "plugins": {
+    "whatsappChat": {
+      "enabled": false,
+      "phone": "917977181838",
+      "position": "right",
+      "greeting": "Hi! How can we help you?",
+      "headerText": "Chat with us"
+    },
+    "cookieConsent": {
+      "enabled": false,
+      "message": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+      "buttonText": "Accept All",
+      "policyUrl": ""
+    },
+    "googleReviews": {
+      "enabled": false,
+      "placeId": "",
+      "theme": "light"
+    },
+    "instagramFeed": {
+      "enabled": false,
+      "username": "cafepibatie",
+      "count": 8
+    },
+    "customerSupport": {
+      "enabled": false,
+      "faqs": [
+        {"question": "What are your operating hours?", "answer": "We are open from 10:30am to 11:30pm at Borivali and 10:00am to 11:00pm at Andheri."},
+        {"question": "Do you offer delivery?", "answer": "Yes! You can order through Zomato or Swiggy."},
+        {"question": "Is the cafe pet-friendly?", "answer": "Yes! We welcome your furry friends in our outdoor seating area."}
+      ]
+    }
   }
 }

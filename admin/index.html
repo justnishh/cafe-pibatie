@@ -442,6 +442,7 @@
                 <a href="#" data-section="cta">CTA Section</a>
                 <a href="#" data-section="reviews">Reviews</a>
                 <a href="#" data-section="footer">Footer</a>
+                <a href="#" data-section="plugins">Plugins</a>
                 <a href="#" data-section="settings">Settings</a>
             </div>
             <div class="sidebar-footer">
@@ -708,6 +709,107 @@
                 </div>
             </div>
         </div>
+        
+        <div class="section" id="plugins">
+            <div class="section-header">
+                <h1>Plugins</h1>
+            </div>
+            
+            <!-- WhatsApp Chat -->
+            <div class="card">
+                <h3>WhatsApp Chat</h3>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="whatsappEnabled"> Enable WhatsApp Chat
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number (with country code, no +)</label>
+                    <input type="text" id="whatsappPhone" placeholder="917977181838">
+                </div>
+                <div class="form-group">
+                    <label>Position</label>
+                    <select id="whatsappPosition">
+                        <option value="right">Right</option>
+                        <option value="left">Left</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Greeting Message</label>
+                    <input type="text" id="whatsappGreeting" placeholder="Hi! How can we help you?">
+                </div>
+                <div class="form-group">
+                    <label>Header Text</label>
+                    <input type="text" id="whatsappHeader" placeholder="Chat with us">
+                </div>
+            </div>
+            
+            <!-- Cookie Consent -->
+            <div class="card">
+                <h3>Cookie Consent</h3>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="cookieEnabled"> Enable Cookie Consent Banner
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="cookieMessage">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</textarea>
+                </div>
+                <div class="form-group">
+                    <label>Button Text</label>
+                    <input type="text" id="cookieButton" value="Accept All">
+                </div>
+                <div class="form-group">
+                    <label>Privacy Policy URL</label>
+                    <input type="text" id="cookiePolicy" placeholder="https://example.com/privacy">
+                </div>
+            </div>
+            
+            <!-- Google Reviews -->
+            <div class="card">
+                <h3>Google Reviews</h3>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="googleReviewsEnabled"> Enable Google Reviews
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Google Place ID</label>
+                    <input type="text" id="googleReviewsPlaceId" placeholder="ChIJKc...">
+                </div>
+            </div>
+            
+            <!-- Instagram Feed -->
+            <div class="card">
+                <h3>Instagram Feed</h3>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="instagramEnabled"> Enable Instagram Feed
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Instagram Username</label>
+                    <input type="text" id="instagramUsername" placeholder="cafepibatie">
+                </div>
+            </div>
+            
+            <!-- Customer Support FAQ -->
+            <div class="card">
+                <h3>Customer Support FAQ</h3>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="faqEnabled"> Enable FAQ Section
+                    </label>
+                </div>
+                <div id="faqContainer"></div>
+                <button class="btn btn-secondary" onclick="addFaq()">+ Add FAQ</button>
+            </div>
+            
+            <div class="save-bar">
+                <button class="btn btn-primary" onclick="savePlugins()">Save Plugins</button>
+            </div>
+        </div>
     </div>
     
     <div class="modal" id="itemModal">
@@ -868,6 +970,13 @@
                     loadContent().then(() => renderReviews());
                 }
             }
+            if (section === 'plugins') {
+                if (Object.keys(contentData).length > 0) {
+                    loadPluginSettings();
+                } else {
+                    loadContent().then(() => loadPluginSettings());
+                }
+            }
         }
         
         async function loadContent() {
@@ -917,6 +1026,131 @@
             if (contentData.site) {
                 document.getElementById('siteTitle').value = contentData.site.title || '';
                 document.getElementById('siteDescription').value = contentData.site.description || '';
+            }
+        }
+        
+        function loadPluginSettings() {
+            const p = contentData.plugins || {};
+            
+            // WhatsApp Chat
+            if (p.whatsappChat) {
+                document.getElementById('whatsappEnabled').checked = p.whatsappChat.enabled || false;
+                document.getElementById('whatsappPhone').value = p.whatsappChat.phone || '';
+                document.getElementById('whatsappPosition').value = p.whatsappChat.position || 'right';
+                document.getElementById('whatsappGreeting').value = p.whatsappChat.greeting || '';
+                document.getElementById('whatsappHeader').value = p.whatsappChat.headerText || '';
+            }
+            
+            // Cookie Consent
+            if (p.cookieConsent) {
+                document.getElementById('cookieEnabled').checked = p.cookieConsent.enabled || false;
+                document.getElementById('cookieMessage').value = p.cookieConsent.message || '';
+                document.getElementById('cookieButton').value = p.cookieConsent.buttonText || 'Accept All';
+                document.getElementById('cookiePolicy').value = p.cookieConsent.policyUrl || '';
+            }
+            
+            // Google Reviews
+            if (p.googleReviews) {
+                document.getElementById('googleReviewsEnabled').checked = p.googleReviews.enabled || false;
+                document.getElementById('googleReviewsPlaceId').value = p.googleReviews.placeId || '';
+            }
+            
+            // Instagram Feed
+            if (p.instagramFeed) {
+                document.getElementById('instagramEnabled').checked = p.instagramFeed.enabled || false;
+                document.getElementById('instagramUsername').value = p.instagramFeed.username || '';
+            }
+            
+            // Customer Support FAQ
+            if (p.customerSupport) {
+                document.getElementById('faqEnabled').checked = p.customerSupport.enabled || false;
+                renderFaqs(p.customerSupport.faqs || []);
+            }
+        }
+        
+        function renderFaqs(faqs) {
+            const container = document.getElementById('faqContainer');
+            container.innerHTML = '';
+            faqs.forEach((faq, index) => {
+                const div = document.createElement('div');
+                div.className = 'form-group';
+                div.style.cssText = 'background:#f9f9f9;padding:15px;border-radius:8px;margin-bottom:10px;';
+                div.innerHTML = `
+                    <input type="text" placeholder="Question" value="${faq.question || ''}" id="faqQuestion${index}" style="margin-bottom:10px;">
+                    <textarea placeholder="Answer" id="faqAnswer${index}" style="margin-bottom:10px;">${faq.answer || ''}</textarea>
+                    <button class="btn btn-danger" style="padding:5px 10px;font-size:12px;" onclick="removeFaq(${index})">Remove</button>
+                `;
+                container.appendChild(div);
+            });
+            window.currentFaqs = faqs;
+        }
+        
+        function addFaq() {
+            const faqs = window.currentFaqs || [];
+            faqs.push({question: '', answer: ''});
+            renderFaqs(faqs);
+        }
+        
+        function removeFaq(index) {
+            const faqs = window.currentFaqs || [];
+            faqs.splice(index, 1);
+            renderFaqs(faqs);
+        }
+        
+        async function savePlugins() {
+            const faqs = [];
+            const faqContainer = document.getElementById('faqContainer');
+            const faqDivs = faqContainer.querySelectorAll('div');
+            let idx = 0;
+            faqDivs.forEach(div => {
+                const question = div.querySelector('input[type="text"]')?.value;
+                const answer = div.querySelector('textarea')?.value;
+                if (question && answer) {
+                    faqs.push({question, answer});
+                }
+                idx++;
+            });
+            
+            const plugins = {
+                whatsappChat: {
+                    enabled: document.getElementById('whatsappEnabled').checked,
+                    phone: document.getElementById('whatsappPhone').value,
+                    position: document.getElementById('whatsappPosition').value,
+                    greeting: document.getElementById('whatsappGreeting').value,
+                    headerText: document.getElementById('whatsappHeader').value
+                },
+                cookieConsent: {
+                    enabled: document.getElementById('cookieEnabled').checked,
+                    message: document.getElementById('cookieMessage').value,
+                    buttonText: document.getElementById('cookieButton').value,
+                    policyUrl: document.getElementById('cookiePolicy').value
+                },
+                googleReviews: {
+                    enabled: document.getElementById('googleReviewsEnabled').checked,
+                    placeId: document.getElementById('googleReviewsPlaceId').value
+                },
+                instagramFeed: {
+                    enabled: document.getElementById('instagramEnabled').checked,
+                    username: document.getElementById('instagramUsername').value
+                },
+                customerSupport: {
+                    enabled: document.getElementById('faqEnabled').checked,
+                    faqs: faqs
+                }
+            };
+            
+            const res = await fetch('/api/content/plugins', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(plugins)
+            });
+            
+            const data = await res.json();
+            if (data.success) {
+                showToast('Plugins saved successfully');
+                await loadContent();
+            } else {
+                showToast('Failed to save plugins', 'error');
             }
         }
         
