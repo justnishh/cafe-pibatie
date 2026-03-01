@@ -445,7 +445,7 @@
                 <a href="#" data-section="settings">Settings</a>
             </div>
             <div class="sidebar-footer">
-                <button class="logout-btn" onclick="logout()">Logout</button>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
             </div>
         </div>
         
@@ -1408,6 +1408,8 @@
             document.getElementById('adminPanel').classList.add('active');
             loadContent();
         }
+        
+        document.getElementById('logoutBtn').addEventListener('click', logout);
     </script>
 </body>
 </html>

@@ -16,19 +16,20 @@ const SESSION_SECRET = process.env.SESSION_SECRET || 'default-insecure-change-me
 
 // Security Headers
 app.use(helmet({
-    contentSecurityPolicy: {
-        directives: {
-            defaultSrc: ["'self'"],
-            scriptSrc: ["'self'", "'unsafe-inline'", 'https://unpkg.com', 'https://www.googletagmanager.com'],
-            styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
-            imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
-            fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-            connectSrc: ["'self'", 'https://www.google-analytics.com'],
-            frameSrc: ["'self'", 'https://www.google.com', 'https://maps.google.com', 'https://maps.google.co.in'],
-        },
-    },
+    contentSecurityPolicy: false, // Disabled - enables inline scripts for admin panel
     crossOriginEmbedderPolicy: false,
 }));
+
+// Additional security headers
+app.use((req, res, next) => {
+    res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
+    next();
+});
+
+// CORS Configuration
 
 // CORS Configuration
 app.use(cors({
